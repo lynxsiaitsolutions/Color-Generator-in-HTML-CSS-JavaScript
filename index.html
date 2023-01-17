@@ -1,0 +1,208 @@
+<!-- 
+    Theme: Color Generator (HTML5, CSS3, JavaScript)
+    Author: Lynxsia IT Solutions
+    Website: www.lynxsia.com
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Color Generator HTML5, CSS3, JavaScript - Lynxsia IT Solutions</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Page Style -->
+	<link href="./style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+	<!-- RGB Color -->
+	<div class="container">
+		<h2 class="mb-1">RGB Color</h2>
+		<div class="wrapper">
+			<div class="result" id="rgbColor">rgb(0, 0, 0)</div>
+		</div>
+		<div class="wrapper mb-1">
+			<div class="content text-center">
+				<label for="rgbRed">Red</label>
+				<input class="form-range red rgbInput" type="range" id="rgbRed" min="0" max="255" value="0">
+				<p id="rgbRedValue">0</p>
+			</div>
+			<div class="content text-center">
+				<label for="rgbGreen">Green</label>
+				<input class="form-range green rgbInput" type="range" id="rgbGreen" min="0" max="255" value="0">
+				<p id="rgbGreenValue">0</p>
+			</div>
+			<div class="content text-center">
+				<label for="rgbBlue">Blue</label>
+				<input class="form-range rgbInput" type="range" id="rgbBlue" min="0" max="255" value="0">
+				<p id="rgbBlueValue">0</p>
+			</div>
+		</div>
+		<div class="wrapper">
+			<button type="button" class="btn" id="randomRGBBtn">Random RGB</button>
+		</div>
+	</div>
+
+	<!-- RGBA Color -->
+	<div class="container">
+		<h2 class="mb-1">RGBA Color</h2>
+		<div class="wrapper">
+			<div class="result" id="rgbaColor">rgb(0, 0, 0, 1.0)</div>
+		</div>
+		<div class="wrapper mb-1">
+			<div class="content text-center">
+				<label for="rgbaRed">Red</label>
+				<input class="form-range red rgbaInput" type="range" id="rgbaRed" min="0" max="255" value="0">
+				<p id="rgbaRedValue">0</p>
+			</div>
+			<div class="content text-center">
+				<label for="rgbaGreen">Green</label>
+				<input class="form-range green rgbaInput" type="range" id="rgbaGreen" min="0" max="255" value="0">
+				<p id="rgbaGreenValue">0</p>
+			</div>
+			<div class="content text-center">
+				<label for="rgbaBlue">Blue</label>
+				<input class="form-range rgbaInput" type="range" id="rgbaBlue" min="0" max="255" value="0">
+				<p id="rgbaBlueValue">0</p>
+			</div>
+			<div class="content text-center">
+				<label for="rgbaAlpha">Alpha</label>
+				<input class="form-range rgbaInput" type="range" id="rgbaAlpha" min="0" max="10" value="10">
+				<p id="rgbaAlphaValue">1.0</p>
+			</div>
+		</div>
+		<div class="wrapper">
+			<button type="button" class="btn" id="randomRGBABtn">Random RGBA</button>
+		</div>
+	</div>
+
+	<!-- Hex Color -->
+	<div class="container">
+		<h2 class="mb-1">HEX Color</h2>
+		<div class="wrapper">
+			<div class="result" id="hexColor">#000000</div>
+		</div>
+		<div class="wrapper mb-1">
+			<div class="content text-center">
+				<label for="hexRed">Red</label>
+				<input class="form-range red hexInput" type="range" id="hexRed" min="0" max="255" value="0">
+				<p id="hexRedValue">00</p>
+			</div>
+			<div class="content text-center">
+				<label for="hexGreen">Green</label>
+				<input class="form-range green hexInput" type="range" id="hexGreen" min="0" max="255" value="0">
+				<p id="hexGreenValue">00</p>
+			</div>
+			<div class="content text-center">
+				<label for="hexBlue">Blue</label>
+				<input class="form-range hexInput" type="range" id="hexBlue" min="0" max="255" value="0">
+				<p id="hexBlueValue">00</p>
+			</div>
+		</div>
+		<div class="wrapper">
+			<button type="button" class="btn" id="randomHEXBtn">Random HEX</button>
+		</div>
+	</div>
+
+	<!-- Hex Alpha Color -->
+	<div class="container">
+		<h2 class="mb-1">HEXA Color</h2>
+		<div class="wrapper">
+			<div class="result" id="hexaColor">#00000000</div>
+		</div>
+		<div class="wrapper mb-1">
+			<div class="content text-center">
+				<label for="hexaRed">Red</label>
+				<input class="form-range red hexaInput" type="range" id="hexaRed" min="0" max="255" value="0">
+				<p id="hexaRedValue">00</p>
+			</div>
+			<div class="content text-center">
+				<label for="hexaGreen">Green</label>
+				<input class="form-range green hexaInput" type="range" id="hexaGreen" min="0" max="255" value="0">
+				<p id="hexaGreenValue">00</p>
+			</div>
+			<div class="content text-center">
+				<label for="hexaBlue">Blue</label>
+				<input class="form-range hexaInput" type="range" id="hexaBlue" min="0" max="255" value="0">
+				<p id="hexaBlueValue">00</p>
+			</div>
+			<div class="content text-center">
+				<label for="hexaAlpha">Alpha</label>
+				<input class="form-range hexaInput" type="range" id="hexaAlpha" min="0" max="100" value="100">
+				<p id="hexaAlphaValue">ff</p>
+			</div>
+		</div>
+		<div class="wrapper">
+			<button type="button" class="btn" id="randomHEXABtn">Random HEXA</button>
+		</div>
+	</div>
+
+	<!-- HSL Color -->
+	<div class="container">
+		<h2 class="mb-1">HSL Color</h2>
+		<div class="wrapper">
+			<div class="result" id="hslColor">hsl(0, 0%, 0%)</div>
+		</div>
+		<div class="wrapper mb-1">
+			<div class="content text-center">
+				<label for="hslHue">Hue</label>
+				<input class="form-range hslInput" type="range" id="hslHue" min="0" max="359" value="0">
+				<p id="hslHueValue">0</p>
+			</div>
+			<div class="content text-center">
+				<label for="hslSaturation">Saturation</label>
+				<input class="form-range hslInput" type="range" id="hslSaturation" min="0" max="100" value="0">
+				<p id="hslSaturationValue">0</p>
+			</div>
+			<div class="content text-center">
+				<label for="hslLightness">Lightness</label>
+				<input class="form-range hslInput" type="range" id="hslLightness" min="0" max="100" value="0">
+				<p id="hslLightnessValue">0</p>
+			</div>
+		</div>
+		<div class="wrapper">
+			<button type="button" class="btn" id="randomHSLBtn">Random HSL</button>
+		</div>
+	</div>
+
+	<!-- HSLA Color -->
+	<div class="container">
+		<h2 class="mb-1">HSLA Color</h2>
+		<div class="wrapper">
+			<div class="result" id="hslaColor">hsl(0, 0%, 0%, 1.0)</div>
+		</div>
+		<div class="wrapper mb-1">
+			<div class="content text-center">
+				<label for="hslaHue">Hue</label>
+				<input class="form-range hslaInput" type="range" id="hslaHue" min="0" max="359" value="0">
+				<p id="hslaHueValue">0</p>
+			</div>
+			<div class="content text-center">
+				<label for="hslaSaturation">Saturation</label>
+				<input class="form-range hslaInput" type="range" id="hslaSaturation" min="0" max="100" value="0">
+				<p id="hslaSaturationValue">0</p>
+			</div>
+			<div class="content text-center">
+				<label for="hslaLightness">Lightness</label>
+				<input class="form-range hslaInput" type="range" id="hslaLightness" min="0" max="100" value="0">
+				<p id="hslaLightnessValue">0</p>
+			</div>
+			<div class="content text-center">
+				<label for="hslaAlpha">Alpha</label>
+				<input class="form-range hslaInput" type="range" id="hslaAlpha" min="0" max="10" value="10">
+				<p id="hslaAlphaValue">1.0</p>
+			</div>
+		</div>
+		<div class="wrapper">
+			<button type="button" class="btn" id="randomHSLABtn">Random HSLA</button>
+		</div>
+	</div>
+
+	<script src="./script.js"></script>
+
+</body>
+
+</html>

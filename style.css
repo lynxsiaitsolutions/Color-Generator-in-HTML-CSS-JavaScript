@@ -1,0 +1,289 @@
+/* 
+	Theme: Color Generator (HTML5, CSS3, JavaScript)
+    Author: Lynxsia IT Solutions
+    Website: www.lynxsia.com
+*/
+
+/* Basic settings */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: #ecf1f9;
+	color: #1a1e49;
+	overflow-x: hidden;
+	font-family: monospace, sans-serif;
+}
+/* main container style */
+.container {
+	padding: 0.5rem;
+	width: 100%;
+	margin-bottom: 5rem;
+}
+/* main wrapper style for each block rgb, hex, hsl etc. */
+/* We use flex layout */
+.wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+/* main content style like range */
+.content {
+	flex: 1;
+	min-width: 150px;
+	width: 100%;
+	max-width: 300px;
+}
+
+/* Output Div style */
+.result {
+	padding: 2rem 3rem;
+	margin-bottom: 1rem;
+	text-align: center;
+	background-color: rgb(0, 0, 0);
+	color: #ffffff;
+	width: 100%;
+	max-width: 400px;
+	border-radius: 0.25rem;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.mb-1 {
+	margin-bottom: 1rem;
+}
+
+.btn {
+	padding: 0.5rem 1rem;
+	outline: none;
+	min-width: 10rem;
+	background-color: #2a317d;
+	color: #ecf1f9;
+	border: 0.12rem solid #2a317d;
+	box-shadow: 0 0 20px 0 rgba(26, 30, 73, 0.35);
+	border-radius: 0.25rem;
+	user-select: none;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+.btn:hover {
+	background-color: #1a1e49;
+	border-color: #1a1e49;
+	box-shadow: none;
+	transition: 0.2s ease-in-out;
+}
+
+.text-red {
+	color: #ec4f4f;
+}
+
+/* Form Range Custom design (You can ignore this if do not want custom range) */
+/* Form Range sltyle for default(All) */
+.form-range {
+	height: 20px;
+	-webkit-appearance: none; /* Hide/Remove default range input style */
+	margin: 1rem 0;
+	width: 100%;
+	background-color: transparent;
+}
+.form-range:focus {
+	outline: none;
+}
+
+/* Range Slide track style chrome */
+.form-range::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 8px;
+	cursor: pointer;
+	background: rgba(62, 153, 232, 0.3);
+	border-radius: 5px;
+}
+/* Range Slide track style when sliding chrome */
+.form-range:focus::-webkit-slider-runnable-track {
+	background: rgba(62, 153, 232, 0.5);
+}
+/* Range Slide thumb style chrome */
+.form-range::-webkit-slider-thumb {
+	height: 16px;
+	width: 16px;
+	border-radius: 50%;
+	background: #3e99e8;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -4px;
+}
+/* Range Slide thumb style when sliding chrome */
+.form-range:focus::-webkit-slider-thumb {
+	background: #2b83cf;
+	box-shadow: 0 0 0 2px rgba(62, 153, 232, 0.8);
+}
+
+/* Range Slide track style firefox */
+.form-range::-moz-range-track {
+	width: 100%;
+	height: 8px;
+	cursor: pointer;
+	background: rgba(62, 153, 232, 0.3);
+	border-radius: 5px;
+}
+/* Range Slide track style when sliding firefox */
+.form-range:focus::-moz-range-track {
+	background: rgba(62, 153, 232, 0.5);
+}
+/* Range Slide thumb style firefox */
+.form-range::-moz-range-thumb {
+	height: 16px;
+	width: 16px;
+	border-radius: 50%;
+	background: #3e99e8;
+	cursor: pointer;
+}
+/* Range Slide thumb style when sliding firefox */
+.form-range:focus::-moz-range-thumb {
+	background: #2b83cf;
+	box-shadow: 0 0 0 2px rgba(62, 153, 232, 0.8);
+}
+
+/* Range Slide track style explorer/Edge */
+.form-range::-ms-track {
+	width: 100%;
+	height: 8px;
+	cursor: pointer;
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+	border-radius: 5px;
+}
+/* Range Slide track style explorer/Edge */
+.form-range::-ms-fill-lower {
+	background: rgba(62, 153, 232, 0.3);
+	border-radius: 50%;
+}
+/* Range Slide track style explorer/Edge */
+.form-range::-ms-fill-upper {
+	background: rgba(62, 153, 232, 0.3);
+	border-radius: 50%;
+}
+/* Range Slide thumb style explorer/Edge */
+.form-range::-ms-thumb {
+	margin-top: 1px;
+	height: 16px;
+	width: 16px;
+	border-radius: 50%;
+	background: #3e99e8;
+	cursor: pointer;
+}
+/* Range Slide thumb style when sliding explorer/Edge */
+.form-range:focus:-ms-thumb {
+	background: #2b83cf;
+	box-shadow: 0 0 0 2px rgba(62, 153, 232, 0.8);
+}
+/* Range Slide track style when sliding explorer/Edge */
+.form-range:focus::-ms-fill-lower {
+	background: rgba(62, 153, 232, 0.5);
+}
+/* Range Slide track style when sliding explorer/Edge */
+.form-range:focus::-ms-fill-upper {
+	background: rgba(62, 153, 232, 0.5);
+}
+
+/* Form Range sltyle for red range */
+.form-range.red::-webkit-slider-runnable-track {
+	background: rgba(255, 80, 113, 0.3);
+}
+.form-range.red:focus::-webkit-slider-runnable-track {
+	background: rgba(255, 80, 113, 0.5);
+}
+.form-range.red::-webkit-slider-thumb {
+	background: #ff5071;
+}
+.form-range.red:focus::-webkit-slider-thumb {
+	background: #f6385b;
+	box-shadow: 0 0 0 2px rgba(255, 80, 113, 0.8);
+}
+.form-range.red::-moz-range-track {
+	background: rgba(255, 80, 113, 0.3);
+}
+.form-range.red:focus::-moz-range-track {
+	background: rgba(255, 80, 113, 0.5);
+}
+.form-range.red::-moz-range-thumb {
+	background: #ff5071;
+}
+.form-range.red:focus::-moz-range-thumb {
+	background: #f6385b;
+	box-shadow: 0 0 0 2px rgba(255, 80, 113, 0.8);
+}
+.form-range.red::-ms-fill-lower {
+	background: rgba(255, 80, 113, 0.3);
+}
+.form-range.red::-ms-fill-upper {
+	background: rgba(255, 80, 113, 0.3);
+}
+.form-range.red::-ms-thumb {
+	background: #ff5071;
+}
+.form-range.red:focus:-ms-thumb {
+	background: #f6385b;
+	box-shadow: 0 0 0 2px rgba(255, 80, 113, 0.8);
+}
+.form-range.red:focus::-ms-fill-lower {
+	background: rgba(255, 80, 113, 0.5);
+}
+.form-range.red:focus::-ms-fill-upper {
+	background: rgba(255, 80, 113, 0.5);
+}
+
+/* Form Range sltyle for green range */
+.form-range.green::-webkit-slider-runnable-track {
+	background: rgba(30, 217, 170, 0.3);
+}
+.form-range.green:focus::-webkit-slider-runnable-track {
+	background: rgba(30, 217, 170, 0.5);
+}
+.form-range.green::-webkit-slider-thumb {
+	background: #1ed9aa;
+}
+.form-range.green:focus::-webkit-slider-thumb {
+	background: #0faa83;
+	box-shadow: 0 0 0 2px rgba(30, 217, 170, 0.8);
+}
+.form-range.green::-moz-range-track {
+	background: rgba(30, 217, 170, 0.3);
+}
+.form-range.green:focus::-moz-range-track {
+	background: rgba(30, 217, 170, 0.5);
+}
+.form-range.green::-moz-range-thumb {
+	background: #1ed9aa;
+}
+.form-range.green:focus::-moz-range-thumb {
+	background: #0faa83;
+	box-shadow: 0 0 0 2px rgba(30, 217, 170, 0.8);
+}
+.form-range.green::-ms-fill-lower {
+	background: rgba(30, 217, 170, 0.3);
+}
+.form-range.green::-ms-fill-upper {
+	background: rgba(30, 217, 170, 0.3);
+}
+.form-range.green::-ms-thumb {
+	background: #1ed9aa;
+}
+.form-range.green:focus:-ms-thumb {
+	background: #0faa83;
+	box-shadow: 0 0 0 2px rgba(30, 217, 170, 0.8);
+}
+.form-range.green:focus::-ms-fill-lower {
+	background: rgba(30, 217, 170, 0.5);
+}
+.form-range.green:focus::-ms-fill-upper {
+	background: rgba(30, 217, 170, 0.5);
+}
